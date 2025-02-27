@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-    <div class="logo">Currently looking for work!</div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -20,14 +19,47 @@
         </nav>
     </header>
 
-    <section class="intro">
-        <div class="intro_content">
-            <h1 class="name_home"><span>Mathias H. Løyche</span></h1>
-            <h2>Datateknikerelev med Speciale i Programmering</h2>
-            <p>Hvis dit firma søger en motiveret datateknikerelev, der vægter kvalitet højt, så er jeg nok den rette for jer!</p>
-            <p>' Mathias er en fantastisk udvikler, som bare kan sine ting ' <br>- Malthe Lajer Mehl-Ludvigsen</p>
+    <section class="project_sec">
+        <div class="project_nav">
+            <nav>
+                <ul class = "port_ul">
+                    <li><button onclick="switchProject('default')" style="font-size: 20px;">Introduction</button></li>
+                    <li><button onclick="switchProject('wc3rise')" style="font-size: 20px;">WC3 Rise</button></li>
+                    <li><button onclick="switchProject('homm3')" style="font-size: 20px;">Homm3 Draft</button></li>
+                    <li><button onclick="switchProject('csv_conversion')" style="font-size: 20px;">CSV Conversion</button></li>
+                    <li><button onclick="switchProject('grades_db')" style="font-size: 20px;">Grades DB</button></li>
+                    <li><button onclick="switchProject('vop-exam')" style="font-size: 20px;">VOP-Exam</button></li>
+                    <li><button onclick="switchProject('python_projects')" style="font-size: 20px;">Python Assignments</button></li>
+                </ul>
+            </nav>
         </div>
     </section>
+
+
+    <div class="container">
+        <div id="content-wrapper">
+            <div class="port_content" id="default">
+                <h1>This page contains a few of my recent projects.</h1>
+                <p>You can select which project you want to see in the navigation bar above. <br> 
+                    All projects include a link directly to its GitHub repository.<br><br>
+                    Languages I have worked with include, but are not limited to:<br>
+                    <li>C#.NET</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li></p>
+                    <p><br>For information about the structure of this website, you can look at the repository here: 
+                        <a href="https://github.com/MHLoyche/Portfolio_Website">https://github.com/MHLoyche/Portfolio_Website</a><br></p>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-container">
+        <img src="images/mhloyche_web.png" id="project-image" alt="Project Image">
+    </div>
 
     <section class="image_grp">
         <div>
