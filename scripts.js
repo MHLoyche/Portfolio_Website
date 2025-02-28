@@ -1,3 +1,6 @@
+
+// Content for portfolio page -------------------------------------------------------------------------
+
 const projectData = {
     "default": {
         title: "This page contains a few of my recent projects.",
@@ -89,6 +92,7 @@ const projectData = {
     }
 };
 
+// function to swap content on button press at the portfolio html -------------------------------------------------------------------
 function switchProject(projectId) {
     let contentWrapper = document.getElementById('content-wrapper');
     let currentContent = document.querySelector('.port_content');
@@ -127,3 +131,64 @@ function switchProject(projectId) {
         }, 50);
     }, 300); // Matches CSS transition time
 }
+
+
+// CSS swap for lower resolutions -----------------------------------------------------------------------------------------
+function swapStylesheet() {
+    let link = document.getElementById("main-stylesheet");
+
+    if (window.innerWidth <= 1024) {
+        link.href = "mobile.css"; // Switch to mobile CSS
+    } else {
+        link.href = "styles.css"; // Default CSS
+    }
+}
+
+// Run on page load -----------------------------------------------------------------------------------------------------
+swapStylesheet();
+
+// Run when window resizes ------------------------------------------------------------------------------------------------
+window.addEventListener("resize", swapStylesheet);
+
+
+// image slide show --------------------------------------------------------------------------------------------------------
+
+// setting initial picture for the slide show
+document.addEventListener("DOMContentLoaded", function () {
+    let slideIndex = 1;
+    showSlides(1);
+});
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link id="main-stylesheet" rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <title>Home</title>
 </head>
@@ -27,6 +27,67 @@
             <p>' Mathias is an amazing developer with a sharp mind and strong problem solving skills ' <br>- Malthe Lajer Mehl-Ludvigsen</p>
         </div>
     </section>
+
+    <!-- Container for the image gallery -->
+<div class="imgcontainer">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+      <img src="images/mhloyche_web.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <div class="mySlides">
+      <img src="images/grades.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <div class="mySlides">
+      <img src="images/homm3.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <div class="mySlides">
+      <img src="images/wc3rise.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <div class="mySlides">
+      <img src="images/csv.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <div class="mySlides">
+      <img src="images/VOP.png" style="height: 350px; width: 600px;">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/mhloyche_web.png" style="height: 80px; width: 100%;" onclick="currentSlide(1)" alt="Projects">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/grades.png" style="height: 80px; width: 100%;" onclick="currentSlide(2)" alt="Grade Database">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/homm3.png" style="height: 80px; width: 100%;" onclick="currentSlide(3)" alt="Homm3 Draft">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/wc3rise.png" style="height: 80px; width: 100%;" onclick="currentSlide(4)" alt="WC3 Rise Webpage">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/csv.png" style="height: 80px; width: 100%;" onclick="currentSlide(5)" alt="CSV data conversion">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/VOP.png" style="height: 80px; width: 100%;" onclick="currentSlide(6)" alt="VOP-exam">
+    </div>
+  </div>
+</div>
+
     <section class="image_grp">
         <div>
             <p>Direct link to github/linkedin</p>
@@ -38,5 +99,11 @@
             </a>
         </div>
     </section>
+
+<!-- Initiliazing slideshow --> 
+    <script>
+        let slideIndex = 1;
+        showSlides(slideindex);
+    </script>
 </body>
 </html>
